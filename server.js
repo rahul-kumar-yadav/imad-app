@@ -6,31 +6,31 @@ var app = express();
 app.use(morgan('combined'));
 
 var articles = {
-   'article-One' : {
-    title : 'Article One | Rahul',
-    heading : 'Article One' ,
+   'article-one' : {
+    title : 'Article one | Rahul',
+    heading : 'Article one' ,
     date : '11 aug , 2017' ,
     content :
    ` <p> 
-    'This is the content for my First article'
+    'This is the content for my first article'
     </p>`
    },
-   'article-Two' : {
-     title : 'Article Two | Rahul',
-    heading : 'Article Two' ,
+   'article-two' : {
+     title : 'Article two | Rahul',
+    heading : 'Article two' ,
     date : '12 aug , 2017' ,
     content :
    ` <p> 
-    'This is the content for my Second article'
+    'This is the content for my second article'
     </p>`
     },
-   'article-Three' : {
-     title : 'Article Three | Rahul',
-    heading : 'Article Three' ,
+   'article-three' : {
+     title : 'Article three | Rahul',
+    heading : 'Article three' ,
     date : '13 aug , 2017' ,
     content :
    ` <p> 
-    'This is the content for my Third article'
+    'This is the content for my third article'
     </p>`
   },
 };
@@ -76,9 +76,9 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/:articleName' , function (req,res) {
-    var articleName = req.params.articleName;
-    res.send(createTemplate(articles[articleName]));
+app.get('/:articlename' , function (req,res) {
+    var articlename = req.params.articlename;
+    res.send(createTemplate(articles[articlename]));
 });
 
 app.get('/ui/style.css', function (req, res) {
