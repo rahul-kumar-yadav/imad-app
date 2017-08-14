@@ -1,12 +1,8 @@
-console.log('Loaded!');
-
-// move the image
-var img = document.getElementById('madi');
-var marginLeft = 0;
-function moveRight () {
-    marginLeft = marginLeft + 10;
-    img.style.marginLeft = marginLeft + 'px';
+// Counter code
+var button = document.getElementbyId('counter');
+{
+    
+    counter = counter + 1;
+    var span = document.getElementbyId('count');
+    span.innerHTML= counter.toString();
 }
-img.onclick = function () {
-    var interval = setInterval(moveRight , 100);
-};
